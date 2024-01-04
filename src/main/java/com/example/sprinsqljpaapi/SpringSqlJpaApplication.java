@@ -1,5 +1,7 @@
 package com.example.sprinsqljpaapi;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 //import org.springframework.context.annotation.Bean;
@@ -14,10 +16,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //@EnableSwagger2
 public class SpringSqlJpaApplication {
 
-//    private static final Logger log = LoggerFactory.getLogger(SprinsqljpaApiApplication.class);
+   private static final Logger logger = LoggerFactory.getLogger(SpringSqlJpaApplication.class);
 
     public static void main(String[] args) {
         SpringApplication.run(SpringSqlJpaApplication.class, args);
+        logger.info("SpringSqlJpaApplication started successfully");
+        logger.trace("Trace Message!");
+        logger.debug("Debug Message!");
     }
 //    @Bean
 //    public Docket postsApi() {
